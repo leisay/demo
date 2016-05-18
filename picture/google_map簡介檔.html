@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+<meta charset="utf-8">
+<title>google_map</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="google_map">
+<meta name="author" content="aandd">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/jquery-ui-1.8.23.custom.css" rel="stylesheet">
+
+<!-- 引入js檔案開始 -->
+<script src="js/jquery1.8.js"></script>
+<script src="js/jquery-ui-1.8.23.custom.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<!-- 引入js檔案結束 -->
+<script type="text/javascript"
+    src="https://maps.google.com/maps/api/js?sensor=false">
+</script>
+<script>
+function initialize() {
+    //設定一個經緯度給latlng
+    var latlng = new google.maps.LatLng(23.5, 120.93);
+    //建立一個名叫 myOptions的地圖設定參數，縮放層級是8，中央點的座標是latlng 
+    //地圖的樣式是 ROADMAP
+    var myOptions = {
+        zoom: 8,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    //在網頁中找到一個id值為map_canvas的DOM，並產出地圖，這個地圖的參數為myOptions。
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+    
+    //這裡要產生兩個標記
+    //第一個標記位置是myLatLng，第二個標記是myLatLng2
+    //第二個標記我們要自定圖片，所以設定圖片名稱 fav.png  
+    var myLatLng = new google.maps.LatLng(23.4, 120.9);
+    var myLatLng2 = new google.maps.LatLng(23.6, 121);
+    var image2 = 'fav.png';
+
+    //在地圖map產生第一個標記，標記的位置是myLatLng，而且標記可以移動draggable:true,。
+      var Marker1 = new google.maps.Marker({
+          draggable:true,
+          position: myLatLng,
+          map: map
+      });
+    //在地圖map產生第二個標記，要自定圖片為image2。
+      var Marker2 = new google.maps.Marker({
+          draggable:true,
+          position: myLatLng2,
+          map: map,
+          icon: image2
+      });
+
+}
+
+</script>
+<script>
+    $(function(){
+        initialize();
+    });
+</script>
+
+</head>
+
+<body>
+<!--放入網頁主體-->
+
+<div class="container" id="main_content">
+  <!-- 主要內容欄位開始 -->
+    <div id="map_canvas" style="width:600px; height:600px;"></div>
+
+  <!-- 主要內容欄位結束 -->
+  <!-- 頁腳開始 -->
+  <footer>
+    <p>&copy; Company 2012</p>
+  </footer>
+  <!-- 頁腳結束 -->
+</div> 
+<!-- 主要內容欄位結束 -->
+</body>
+</html>

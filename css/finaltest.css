@@ -1,0 +1,124 @@
+.topone{
+height: 36px;
+width: ;
+}
+
+.toptwo{
+
+height: 72px;
+width:;
+background : #FFD0FF;
+
+}
+
+.allgroup{
+	width:960px;
+	margin:0px auto; 
+}
+
+.blockall{
+	overflow: hidden;
+}
+.leftall{
+	
+	width:240px;
+	border:1px solid #F00;
+	float: left;
+	margin-right: 10px;
+	
+}
+.midall{
+	border:1px solid #F00;
+	width: 460px;
+	float: left;
+	margin-right: 10px;
+	display:block;
+}
+.rightall{
+	float: left;
+	width: 240px;
+	display:block;
+	border:1px solid #F00;
+}
+
+
+.leftone{
+height: 240px; 
+width:  240px;
+background: #4DFFFF;
+display:block;
+
+}
+
+.lefttwo{
+
+height: 240px;
+width: 240px;
+display:block;
+background:#7D7DFF;
+}
+
+.leftthr{
+
+height: 600px;
+width:  240px;
+display:block;
+background:#97CBFF;
+}
+
+}
+
+.midone{
+
+height: 200px;
+width:  450px;
+background:#336666; 
+display:block;
+
+}
+
+.midtwo{
+
+height: 200px;
+width:  450px;
+background:#EA7500; 
+display:block;
+
+}
+
+.midthr{
+
+height: 680px;
+width:  450px;
+background:#82D900; 
+display:block;
+
+}
+
+
+.midfou{
+
+height: 200px;
+width:  450px;
+background:#336666; 
+display:block;
+
+}
+
+.rightone{
+
+height: 200px;
+width:  240px;
+background:#977C00; 
+display:block;
+
+}
+
+.righttwo{
+
+height: 880px;
+width: 240px;
+background:#804040; 
+display:block;
+
+}
